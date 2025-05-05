@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <link rel="stylesheet" href="barry_a2.css">
+    </head>
+    <body>
+        <h1>INST377 - Class Activities</h1>
+        <nav id="nav-main">
+            <ul>
+                <li><a href="homepage_a2.html">Home Page</a></li>
+                <li><a href="stocks_a2.html">Stocks</a></li>
+                <li><a href="dogs_a2.html">Dogs</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <button id="stocks_button"><a href="stocks_a2.html">Stocks!</button></a>
+            <button id="dogs_button"><a href="dogs_a2.html">Dogs!</button></a>
+
+            <div id="quote_box">
+                <!-- Random Quote -->
+                 <h2>Quote of the Day</h2>
+                 <h3 id="quote"></h3>
+                 <h4 id="author"></h4>
+            </div>
+        </main>
+
+        <div id="audio_box">
+            <h2>In this web page there are options to navigate using Audio!</h2>
+            <ul>
+                <li>Navigate to a different page -> <strong>Navigate to - page name</strong></li>
+                <li>Say Hello!-> <strong>Prompts site to say Hello</strong></li>
+                <li>Change the color to *color*-> <strong>Changes page color</strong></li>
+            </ul>
+            <button id="audio-start">Turn On Listening</button>
+            <button id="audio-stop">Turn Off Listening</button>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script src="audio_control_a2.js"></script>
+        <script>
+            const quote = document.getElementById("quote");
+            const author = document.getElementById("author");
+            const api_url = "https://zenquotes.io/api/random";
+            async function getQuote(url){
+                const response = await fetch(url);
+                var data = await response.json();
+                console.log(data);
+                quote.innerHTML = data[0].q;
+                author.innerHTML ="- " + data[0].a;
+            }
+            getQuote(api_url);
+        </script>
+    </body>
+</html>
