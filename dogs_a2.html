@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Doge Page</title>
+        <link rel="stylesheet" href="barry_a2.css">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    </head>
+    <body>
+        <h1>Doge Page</h1>
+        <nav id="nav-main">
+            <ul>
+                <li><a href="homepage_a2.html">Home Page</a></li>
+                <li><a href="stocks_a2.html">Stocks</a></li>
+                <li><a href="dogs_a2.html">Dogs</a></li>
+            </ul>
+        </nav>
+        <h1>Big Boy Doggos</h1>
+
+        <div id="dogSlider" style="width: 250px; height: 250px" data-simple-slider>
+
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+        <br>
+        <section id="breedSection">
+            <h2>Dog Breeds</h2>
+            <div id="breedButtons"></div>
+        </section>
+
+        <section id="breedInformation" style="display: none;">
+            <h2 id="breedName"></h2>
+            <p id="breedDesc"></p>
+            <p><strong>Life Min:</strong><span id="breedLife"></span></p>
+            <p><strong>Life Max:</strong><span id="breedLife1"></span></p>
+        </section>
+
+        <div id="audio_box">
+            <h2>Voice Commands</h2>
+            <ul>
+                <li>Say "Hello" to get a greeting</li>
+                <li>Say "Change the color to *color*"</li>
+                <li>Say "Navigate to *page*</li>
+                <li>Say "Lookup dog breed by saying "Look up dog breed *breed*"</breed></li>
+            </ul>
+
+        <button id="audio-start">Turn On Listening</button>
+        <button id="audio-stop">Turn Off Listening</button>
+
+        <script src="dogs_a2.js"></script>
+        <script src="audio_control_a2.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Stocks Page</title>
+        <link rel="stylesheet" href="barry_a2.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    </head>
+    <body>
+        <h1>Stocks Page</h1>
+        <nav id="nav-main">
+            <ul>
+                <li><a href="homepage_a2.html">Home Page</a></li>
+                <li><a href="stocks_a2.html">Stocks</a></li>
+                <li><a href="dogs_a2.html">Dogs</a></li>
+            </ul>
+        </nav>
+        <h2>Let's chart some stocks!</h2>
+        <input type="text" id="inputTicker" placeholder="Enter the Stock Ticker" maxlength="5">
+        <select name="" id="period-select">
+            <option value="30">30 Days</option>
+            <option value="60">60 Days</option>
+            <option value="90">90 Days</option>
+        </select>
+        <button id="lookUp" class="custom_button">Lookup Stock</button>
+        <canvas id="stockChart"></canvas>
+        <table id="">
+            <thead>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Comments</th>
+                    <th>Sentiment</th>
+                </tr>
+            </thead>
+            <tbody id="top5redditStocks"></tbody>
+        </table>
+
+        <div id="audio_box">
+            <h2>Voice Commands</h2>
+            <ul>
+                <li>Say "Hello" to get a greeting</li>
+                <li>Say "Change the color to *color*"</li>
+                <li>Say "Navigate to *page*"</li>
+                <li>Say "Lookup *Ticker*</li>
+            </ul>
+            <button id="audio-start">Turn on Listening</button>
+            <button id="audio-stop">Turn off Listening</button>
+        </div>
+
+        <script src="audio_control_a2.js"></script>
+        <script src="stocks_a2.js"></script>
+
+    </body>
+</html>
